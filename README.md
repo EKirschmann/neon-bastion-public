@@ -30,10 +30,11 @@ AdMob publisher ID is per account and the file is read per root domain.
 
 ## Before publishing
 
-- `neon-bastion/beta.html` has two placeholders to replace: `PLAY_OPT_IN_URL_HERE` (the closed-test opt-in link from Play Console). The tester
-  Google Group link is already wired: https://groups.google.com/g/neon-bastion-beta
-  (`neon-bastion-beta@googlegroups.com`, anyone may join without approval). Point the
-  Play closed track's tester list at that group.
+- `neon-bastion/beta.html` has no placeholders left. The tester Google Group is
+  https://groups.google.com/g/neon-bastion-beta (`neon-bastion-beta@googlegroups.com`,
+  anyone may join without approval) and the Play opt-in link is
+  https://play.google.com/apps/testing/com.gentso.neonbastion . The closed track reads
+  its tester list from that group.
 - **`app-ads.txt` is deliberately absent.** It must be the exact publisher line issued by
   AdMob, at this domain's root, and the domain must be the one named as the developer
   website on the listing. Do not invent a publisher ID. Allow about 24 hours for the crawl.

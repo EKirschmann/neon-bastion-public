@@ -7,15 +7,30 @@
 <link rel="icon" href="img/icon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
 <link rel="stylesheet" href="../site.css">
-<main>
-	<nav class="site-nav"><a href="../index.html">AVEK</a><a href="index.html">Neon Bastion</a><a href="beta.html">Beta testing</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="data.html">Your data</a></nav>
 
+<header class="hero">
 	<h1>Neon Bastion</h1>
-	<p class="tagline">A roguelike tower defense. You are not the builder. You are the tower.</p>
+	<div class="rule"></div>
+	<p class="sub">That time I got reincarnated as a turret</p>
+	<div class="stage">
+		<img class="turret" src="../turret.svg" alt="" aria-hidden="true">
+		<div class="arc"></div>
+	</div>
+</header>
 
-	<p>There is no body to move. There is a crystal where your heart should be, and a thin
-	ring of light holding back a broken digital world. The System calls this reincarnation.
-	It cannot explain what you were reincarnated from.</p>
+<main>
+	<nav class="site-nav">
+		<a href="../index.html">AVEK</a>
+		<a href="index.html" aria-current="page">Neon Bastion</a>
+		<a href="beta.html">Beta testing</a>
+		<a href="support.html">Support</a>
+		<a href="privacy.html">Privacy</a>
+		<a href="data.html">Your data</a>
+	</nav>
+
+	<p class="lede">There is no body to move. There is a crystal where your heart should be,
+	and a thin ring of light holding back a broken digital world. The System calls this
+	reincarnation. It cannot explain what you were reincarnated from.</p>
 
 	<p>Neon Bastion is a single-player, portrait tower defense game for Android. You hold one
 	position against an advancing signal, choose a blessing after every wave, and spend what
@@ -25,17 +40,17 @@
 	<div class="shots">
 		<figure>
 			<img src="img/combat.jpg" width="540" height="960" loading="lazy" decoding="async"
-				alt="Combat on a hexagonal dark field: orange geometric monsters advance on a cyan crystal turret behind a curved barrier, with wave, monster and mana counters along the top and four skill icons under the crystal.">
+				alt="Combat on a hexagonal dark field: amber and rose geometric monsters advance on a cyan crystal turret behind a curved barrier, with wave, monster and mana counters along the top and four skill icons under the crystal.">
 			<figcaption>Combat. Your skills fire on their own; tap a monster to focus them.</figcaption>
 		</figure>
 		<figure>
 			<img src="img/journey.jpg" width="540" height="960" loading="lazy" decoding="async"
-				alt="The Journey map: numbered stage markers on a painted ruined landscape, with a detail sheet describing the selected stage, its System briefing and an Enter button.">
+				alt="The Journey map: numbered stage markers on a painted ruined landscape, with each region named and its stage range, clear count and Elite count beside it.">
 			<figcaption>The Journey. Stage briefings, ratings and Elite re-runs.</figcaption>
 		</figure>
 		<figure>
 			<img src="img/pool.jpg" width="540" height="960" loading="lazy" decoding="async"
-				alt="The Skill pool screen: a grid of glowing skill emblems, each labelled Starter, Included or Locked, with buttons to include or exclude every skill.">
+				alt="The Skill library: a grid of glowing skill emblems, each either earned or showing which Journey stage teaches it.">
 			<figcaption>The skill pool decides which skills and blessings can be offered.</figcaption>
 		</figure>
 		<figure>
@@ -45,11 +60,13 @@
 		</figure>
 		<figure>
 			<img src="img/forge.jpg" width="540" height="960" loading="lazy" decoding="async"
-				alt="The Turret forge: a faceted cyan crystal on a ring, with a row of coloured shard tiles below showing tier and quality, and a Merge fives button.">
+				alt="The Turret forge: a faceted cyan crystal on a ring, with the equipped form, upgrade ranks and shard sockets listed below it.">
 			<figcaption>The Forge. Embed shards in the crystal and merge matching ones upward.</figcaption>
 		</figure>
 	</div>
-	<p class="note">Captured from the current beta build, v0.104.0.</p>
+	<p class="ahead">Captured from the current beta build, v0.104.0.</p>
+
+	<div class="arc arc--divider"></div>
 
 	<h2>Hold the line</h2>
 	<p>Defend your crystal against waves of geometric creatures and the bosses that follow
@@ -91,33 +108,16 @@
 	Settings moves it to another install. See <a href="support.html">support</a> for how, and
 	<a href="data.html">your data</a> for how to delete it.</p>
 
-	<h2>Where it is</h2>
-	<p>Neon Bastion is in testing on Google Play and is not publicly released yet.
-	Testers are being recruited now.</p>
+	<div class="arc arc--divider"></div>
 
-	<div class="card">
-		<h3><a href="beta.html">Join the beta &rarr;</a></h3>
-		<p>Play the current build on your own phone and tell us what breaks. Three steps, a few minutes.</p>
-	</div>
-	<div class="card">
-		<h3><a href="support.html">Support and questions</a></h3>
-		<p>Moving your progress, resetting it, reporting a bug, and what the game does and does not do.</p>
-	</div>
-	<div class="card">
-		<h3><a href="privacy.html">Privacy policy</a></h3>
-		<p>What the game stores, what it does not, and who it is shared with. Short version: it stays on your device.</p>
-	</div>
-	<div class="card">
-		<h3><a href="data.html">Your data and how to delete it</a></h3>
-		<p>Where your progress lives and how to remove it, on the device or by request.</p>
-	</div>
-	<div class="card">
-		<h3><a href="mailto:floridaairborne@gmail.com">Email us</a></h3>
-		<p>Bugs, questions, or anything about your data: floridaairborne@gmail.com</p>
-	</div>
+	<h2>Where it is</h2>
+	<p>Neon Bastion is in testing on Google Play and is not publicly released yet. It needs
+	people on real phones before it goes out, because so far it has been tested on almost
+	none. <a href="beta.html">Joining takes three steps</a>, and the game is free while
+	it is in testing and after.</p>
 
 	<footer>
-		Neon Bastion &middot; Android package <code>com.gentso.neonbastion</code><br>
+		Neon Bastion, Android package <code>com.gentso.neonbastion</code>, made by AVEK.<br>
 		Privacy and support: <a href="mailto:floridaairborne@gmail.com">floridaairborne@gmail.com</a>
 	</footer>
 </main>

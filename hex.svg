@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="34.64" viewBox="0 0 60 34.64">
+  <g fill="none" stroke="#0c1724" stroke-width="1">
+    <path d="M20 0 L10 0 L0 17.32 L10 34.64 L20 34.64"/>
+    <path d="M40 0 L50 0 L60 17.32 L50 34.64 L40 34.64"/>
+    <path d="M20 0 L40 0 M20 34.64 L40 34.64 M30 17.32 L30 17.32"/>
+    <path d="M50 0 L40 0 L30 17.32 L40 34.64 L50 34.64"/>
+  </g>
+</svg>

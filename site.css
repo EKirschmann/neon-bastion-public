@@ -1,0 +1,95 @@
+/* Neon Bastion public site. Shared by every page; no build step, no third-party fonts,
+   no analytics, no embedded advertising. Colours follow the game: near-black field,
+   cyan structure, amber only where something belongs to the opposition. */
+:root {
+	--bg: #0d1621;
+	--panel: #121d2b;
+	--line: #243244;
+	--text: #e8edf2;
+	--muted: #9bb0c2;
+	--cyan: #8ee0e2;
+}
+* { box-sizing: border-box; }
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 18px/1.7 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+main { max-width: 760px; margin: auto; padding: 48px 24px 72px; }
+h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .2em; }
+h2 { margin-top: 2em; font-size: 1.35rem; color: var(--cyan); }
+h3 { font-size: 1.05rem; margin-bottom: .3em; }
+a { color: var(--cyan); }
+p { overflow-wrap: anywhere; }
+.tagline { color: var(--muted); font-size: 1.15rem; margin: 0 0 2em; }
+.site-nav { border-bottom: 1px solid var(--line); padding-bottom: 1em; margin-bottom: 2em; }
+.site-nav a { margin-right: 1.2em; display: inline-block; }
+.card {
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-left: 3px solid var(--cyan);
+	border-radius: 6px;
+	padding: 18px 22px;
+	margin: 0 0 16px;
+}
+.card h3 { margin-top: 0; }
+.card p { margin: .4em 0 0; color: var(--muted); font-size: .95rem; }
+ol.steps { padding-left: 0; list-style: none; counter-reset: step; }
+ol.steps > li {
+	counter-increment: step;
+	background: var(--panel);
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	padding: 18px 22px 18px 62px;
+	margin-bottom: 16px;
+	position: relative;
+}
+ol.steps > li::before {
+	content: counter(step);
+	position: absolute; left: 20px; top: 16px;
+	width: 28px; height: 28px; border-radius: 50%;
+	background: var(--cyan); color: #06121b;
+	font-weight: 700; text-align: center; line-height: 28px;
+}
+.note { border-left: 3px solid #d8a657; padding-left: 16px; color: var(--muted); }
+footer { border-top: 1px solid var(--line); margin-top: 3em; padding-top: 1em; color: var(--muted); font-size: .92rem; }
+
+/* Screenshot strip. A swipeable row of phone captures on a narrow screen, a plain grid
+   once there is room for one. The 9:16 aspect-ratio reserves the space before the image
+   loads, so nothing below it jumps. */
+.shots {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 62%;
+	gap: 14px;
+	margin: 0 0 1.4em;
+	padding-bottom: 10px;
+	overflow-x: auto;
+	scroll-snap-type: x proximity;
+	-webkit-overflow-scrolling: touch;
+}
+.shots figure { margin: 0; scroll-snap-align: center; }
+.shots img {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 9 / 16;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: #06121b;
+}
+.shots figcaption { color: var(--muted); font-size: .85rem; line-height: 1.45; margin-top: .6em; }
+@media (min-width: 620px) {
+	.shots {
+		grid-auto-flow: row;
+		grid-auto-columns: auto;
+		grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+		overflow-x: visible;
+	}
+}
+/* Question and answer blocks on the support page. */
+.faq h3 { color: var(--text); margin-top: 1.9em; }
+.faq h3 + p, .faq h3 + ul, .faq h3 + ol { margin-top: .3em; }
+.faq ul { color: var(--muted); }
+.faq ul strong { color: var(--text); }

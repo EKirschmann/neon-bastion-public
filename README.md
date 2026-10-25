@@ -1,3 +1,52 @@
-# Neon Bastion public policy
+# AVEK public site
 
-Public privacy and support site only. Game source is kept in a separate private repository.
+Public studio, policy, support and tester pages, served by GitHub Pages at
+**https://avek.games/**. No build step, no third-party fonts, no analytics, no embedded
+advertising. `.nojekyll` stops Pages from processing the files.
+
+Game source, builds, saves and signing material live in separate private repositories and
+must never be copied here.
+
+```
+/                      studio page        <- Play Console "developer website"
+/CNAME                 avek.games
+/app-ads.txt           NOT YET PRESENT - see below
+/privacy.html          legacy redirect, do not delete (see below)
+/site.css              shared styling
+/neon-bastion/         index, beta, support, privacy, data
+/neon-bastion/img/     optimised screenshots and icons (see below)
+```
+
+Each game gets its own folder. One `app-ads.txt` at the root covers every game, because the
+AdMob publisher ID is per account and the file is read per root domain.
+
+## Play Console fields
+
+| Field | Value |
+| --- | --- |
+| Developer website | `https://avek.games/` |
+| Privacy policy | `https://avek.games/neon-bastion/privacy.html` |
+| Data deletion | `https://avek.games/neon-bastion/data.html` |
+
+## Before publishing
+
+- `neon-bastion/beta.html` has two placeholders to replace: `PLAY_OPT_IN_URL_HERE` (the closed-test opt-in link from Play Console). The tester
+  Google Group link is already wired: https://groups.google.com/g/neon-bastion-beta
+  (`neon-bastion-beta@googlegroups.com`, anyone may join without approval). Point the
+  Play closed track's tester list at that group.
+- **`app-ads.txt` is deliberately absent.** It must be the exact publisher line issued by
+  AdMob, at this domain's root, and the domain must be the one named as the developer
+  website on the listing. Do not invent a publisher ID. Allow about 24 hours for the crawl.
+- **Do not delete `/privacy.html`.** Released builds of Neon Bastion have
+  `https://ekirschmann.github.io/neon-bastion-public/privacy.html` compiled in
+  (`scripts/title.gd`). Setting a custom domain makes GitHub redirect that to
+  `https://avek.games/privacy.html`, and this stub forwards it to the real policy. It can go
+  once no supported build still carries the old URL.
+- **The images in `neon-bastion/img/` are already-public Play listing assets**, resized
+  and recompressed from the game repository's `store/listing-v0104/` captures and
+  `assets/icon.png`. They are the only game material that belongs here. They are current
+  as of v0.104.0. Recapture them whenever the build's appearance or labelling changes;
+  `docs/store-listing.md` in the game repository holds the exact capture commands.
+- The privacy policy must keep matching the shipped build. It currently describes a game
+  with no advertising, no analytics, no accounts and no in-app purchases. Update it, the
+  data page and the Play Console declarations in the same batch as any of those features.
